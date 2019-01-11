@@ -1,0 +1,51 @@
+<style>
+        .navbar-default {
+            background-color: #66b3ff;
+            color: white;
+        
+        }
+        </style>
+
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand"a href="#">Workout Tracker APP</a>
+            </div>
+           <div>
+            <a [routerLink]="['/Add']">Add Employees</a></div>
+        <div><a [routerLink]="['/Edit']">Edit Employees</a></div>
+            
+        </div>
+        </nav>
+<div class="container">
+
+
+            <router-outlet></router-outlet>
+
+    <h2 class="text-center">Employees</h2>
+  
+    <div class="row">
+    
+        <table class="table ">
+        <thead class="thead-light">
+        <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Email</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees;let i=index"  >
+    
+        <td>{{employee.empid}}</td>
+        <td>{{employee.first_name}}</td>
+        <td>{{employee.gender}}</td>
+        <td>{{employee.email}}</td>
+        <td><button type="button" class="btn btn-danger" (click)="deleteemployee(i,employee.email)">DELETE</button></td>
+        </tr>
+        </tbody>
+        </table>
+  </div>
+  </div>
