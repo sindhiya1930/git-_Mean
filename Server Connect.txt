@@ -1,0 +1,13 @@
+Steps to run the application:
+
+1.Start the Mongo Db:
+		o C:\Program Files\MongoDB\Server\3.4\bin
+		o Provide the command:mongod
+		o mongo connects to ip:port :" 127.0.0.1:27017 "
+		o database:employees, collection:employee
+
+2.Start the server:
+		o provide npm start--- server.js runs
+
+3.Start the Application:
+		o provide npm start
